@@ -13,17 +13,23 @@ cp .env.example .env
 
 To know the field names of your PDF file, you can use the following command 
 ```bash
-php application pdf:fields
+php report pdf:fields
 ```
 
 ## Usage
 Start up with docker-compose
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
+Enter the container with
 ```bash
-php application generate
+docker exec -it report_container /bin/bash
+```
+
+And start program with
+```bash
+php report generate
 ```
 
 ### Generated files will be stored in the `storage/filled` directory.

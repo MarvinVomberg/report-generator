@@ -1,5 +1,6 @@
 services:
   php:
+    container_name: report_container
     build:
       dockerfile: Dockerfile
     volumes:
